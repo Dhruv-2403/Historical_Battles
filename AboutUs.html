@@ -3,46 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us | Project Contributions</title>
     <link rel="stylesheet" href="About.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h>Our Mission</h>
-            <p>Our mission is to provide a rich, engaging resource for history enthusiasts, students, and curious minds alike. By combining scholarly research with accessible storytelling, we strive to make historical events both educational and inspiring.Through this platform, we aim to:
-                Encourage an appreciation of India’s vibrant and diverse history.
-                Highlight the socio-political and cultural impacts of these historic battles.
-                Foster curiosity and pride in our shared heritage.</p>
-            <p>Our goal is to showcase victories that highlight the indomitable spirit of our ancestors, who continually resisted invasions and safeguarded their land, culture, and identity.</p>
+            <h1>Our Mission</h1>
+            <p>Our mission is to provide a rich, engaging resource for history enthusiasts. We strive to make historical events both educational and inspiring through scholarly research and accessible storytelling.</p>
         </div>
+
         <div id="header2">
-            <h >About Us</h>
+            <h2>Project Contributors</h2>
         </div>
 
-        <div class="i">
-            <div class="desc1">
-                <img class="nitin" src="Nitin.jpeg">
-                <p>1.Python and Excellent Web Developer</p>
-                <p>2.Works on Home page and Navigation Bar in our S&W Project</p>
-                
+        <div class="team-grid">
+        
+            <div class="card reveal">
+                <div class="img-container">
+                    <img class="team-img" src="Nitin.jpeg" alt="Nitin">
+                </div>
+                <h3>Nitin</h3>
+                <ul class="work-list">
+                    <li>Developed the Project Home page</li>
+                    <li>Designed and Implemented the Navigation Bar</li>
+                    <li>Contributed in Deciding Ancient Battles of India</li>
+                </ul>
             </div>
 
-
-            <div class="desc2">
-                <img class="siddharth" src="Siddharth.jpeg">
-                <p>1.He works on our some of the webpages of our Project</p>
-                <p>2. A good Content Creator , excellence in python , also knows C++.</p>
+        
+            <div class="card reveal">
+                <div class="img-container">
+                    <img class="team-img" src="Siddharth.jpeg" alt="Siddharth">
+                </div>
+                <h3>Siddharth</h3>
+                <ul class="work-list">
+                    <li>Created core content for historical webpages</li>
+                  
+                    <li>Managed overall content strategy and research</li>
+                </ul>
             </div>
 
-
-            <div class="desc3">
-                <img class="Dhruv" src="Dhruv.jpeg">
-                <p>1.Contribute to the webpages of the Project & the About Us section.</p>
-                <p>2.Knows Python and Full-Stack Development like HTML,CSS.</p>
+      
+            <div class="card reveal">
+                <div class="img-container">
+                    <img class="team-img" src="Dhruv.jpeg" alt="Dhruv">
+                </div>
+                <h3>Dhruv</h3>
+                <ul class="work-list">
+                    <li>Contributed to multi-page web architecture</li>
+                    <li>Developed the interactive "About Us" section</li>
+                    <li>Implemented Full-Stack features using HTML, CSS, and Python</li>
+                </ul>
             </div>
         </div>
     </div>
-    
+
+    <script>
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
